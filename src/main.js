@@ -18,6 +18,14 @@ $(function () {
       .trigger('addRows', [row, false, function () {
 //        $t.trigger('refreshWidgets');
         $t.find('tr').eq(1).remove();
+
+        var config = $( 'table' )[ 0 ].config,
+            // optional parameter to target tbodies
+            $tbodies = $( 'table' ).children( 'tbody.totals' ),
+            callback = function( table ) {
+              // do something
+            };
+        $.tablesorter.updateCache( config, callback, $tbodies );
       }]);
   })
 })
