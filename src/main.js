@@ -17,7 +17,7 @@ $(function () {
       .find('tbody').append(row)
       .trigger('addRows', [row, false, function () {
 //        $t.trigger('refreshWidgets');
-        $t.find('tr').eq(1).off().remove();
+        $t.find('tr').eq(1).remove();
       }]);
   })
 })
